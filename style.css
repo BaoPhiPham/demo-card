@@ -1,0 +1,99 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    /* Mặc định */
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+body{
+    font-size: 1.6rem;
+}
+
+/* bắt đầu style */
+.container{
+    /* border: 1px solid red; */
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    /* 1320 - 10 = 1310 
+    => 1310/5 = 262px - 6(khoảng cách giữa các card-block)
+    => 256 cho mỗi card-block*/
+}
+
+.card-corousel{
+    /* border: 1px solid green; */
+    display: flex;
+    /* trong flex ko có xuống hàng khi màn 
+    hình bị thu nhỏ dẫn đến hở sường*/
+    flex-wrap: wrap;
+    /* khi màn hình bị nhỏ hơn muốn phần xuống ở giữa */
+    justify-content: center;
+}
+
+/* làm ảnh  */
+.card__block{
+    /* border: 1px solid #eeeeee; */
+    width: 25.6rem;
+    margin: 0.3rem;
+    /* các vật thể trong card__block có thể cách border */
+    padding: 0.3rem;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+.card__block:hover{
+    /*số và đơn vị, các thuộc tính và class(em::before, em:hover) ko 
+    đc có dấu cách giữa chúng*/
+    box-shadow: 3px 3px 8px 1px #695e5e;
+}
+.card-img{
+    width: 24.8rem;
+    /* nếu hình có bị lồi thì: */
+    overflow: hidden; /*bỏ*/
+}
+.card-img img{
+    /* bức hình khá chuẩn nên ko cần fix gì cả */
+    display: block;
+    width: 100%;
+}
+
+/* làm information */
+.card-infor{
+    margin: 0.3rem 0;
+}
+.card_controller{
+    /* border: 1px solid hotpink; */
+    display: flex;
+    justify-content: space-between;
+}
+.card_controller__block{
+    width: calc(50% - 1px);
+}
+
+/* làm 2 cái nút */
+.btn-card__controller{
+    display: block;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    height: 3rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.btn-card__controller hover{
+    background-color: rgb(1, 197, 197);
+}
+
+
+
+
+.splide__slide{
+    display: flex;
+    justify-content: center;
+}
